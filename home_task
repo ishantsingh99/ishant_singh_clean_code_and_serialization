@@ -1,0 +1,38 @@
+import java.util .*;
+public class simple_compound {
+        public static void main (String argu[ ])
+        {
+            double pr, rate, t, sim,com;
+            String material;
+            Scanner sc=new Scanner (System. in);
+            System.out.println("Enter amount:");
+            pr=sc.nextDouble();
+            System. out. println("Enter no.of years:");
+            t=sc.nextDouble();
+            System. out. println("Enter Rate of  interest");
+            rate=sc.nextDouble();
+            System. out. println("Enter material");
+            material=sc.nextLine();
+            sim=(pr * t * rate)/100;
+            com=pr * Math.pow(1.0+rate/100.0,t) - pr;
+            if(material=="standard"){
+                sim=sim*1200;
+                com=com*1200;
+            }
+            else if(material=="above standard"){
+                sim=sim*1500;
+                com=com*1500;
+            }
+            else if(material=="high standard"){
+                sim=sim*1800;
+                com=com*1800;
+            }
+            else if(material=="fully automated "){
+                sim=sim*2500;
+                com=com*2500;
+            }
+            System.out.println("Simple Interest="+sim);
+            System.out. println("Compound Interest="+com);
+        }
+    }
+
